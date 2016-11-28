@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 	TheSnakesGame game;
-	game.setBoard(board_example);
+	game.setBoard();
 	game.init();
 	game.run();
 }

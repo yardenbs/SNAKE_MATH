@@ -13,13 +13,10 @@ void TheSnakesGame::handleObjectCreationFromBoard(int row, int col){
 
 }
 
-void TheSnakesGame::setBoard(const char* boardToCopy[ROWS]) {
+void TheSnakesGame::setBoard() {
 	//copy board sent to us into originalBoard, setArrowKeys, setColor
 	
-	for (int i = 0; i < ROWS; i++)
-		for (int j = 0; j < COLS; j++)
-			originalBoard[i][j] = boardToCopy[i][j];
-
+	theboard.setGame(this);
 	s[0].setArrowKeys("wsad");
 	s[1].setArrowKeys("ikjl");
 	s[0].setColor(Color::WHITE);
@@ -46,10 +43,13 @@ bool TheSnakesGame::isCookie(const Point& p) {
 
 void TheSnakesGame::init() {
 	//copy original board to actual board (board) and set Snakes Start point
+	
+	//print board func
 	for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLS; j++)
 		{
+
 			board[i][j] = originalBoard[i][j];
 			handleObjectCreationFromBoard(i, j);
 			gotoxy(j, i);//reversed order cols=x rows=y
