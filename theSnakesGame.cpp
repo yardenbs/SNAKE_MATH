@@ -15,17 +15,18 @@ void TheSnakesGame::handleObjectCreationFromBoard(int row, int col){
 
 void TheSnakesGame::setBoard(const char* boardToCopy[ROWS]) {
 	//copy board sent to us into originalBoard, setArrowKeys, setColor
-
+	
 	for (int i = 0; i < ROWS; i++)
 		for (int j = 0; j < COLS; j++)
 			originalBoard[i][j] = boardToCopy[i][j];
 
-	s[0].setArrowKeys("wxad");
-	s[1].setArrowKeys("imjl");
+	s[0].setArrowKeys("wsad");
+	s[1].setArrowKeys("ikjl");
 	s[0].setColor(Color::WHITE);
 	s[1].setColor(Color::YELLOW);
 	s[0].setGame(this);
 	s[1].setGame(this);
+	cookie.setGame(this);
 	cookie.setGame(this);
 
 }
