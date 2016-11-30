@@ -41,5 +41,8 @@
     <ClInclude Include="TheSnakesGame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Menue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
