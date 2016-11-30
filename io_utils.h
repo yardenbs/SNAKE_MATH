@@ -7,6 +7,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
+using namespace std;
 
 void gotoxy(int x, int y);
 void setTextColor(Color);
