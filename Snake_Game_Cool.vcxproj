@@ -152,7 +152,7 @@
   <ItemGroup>
     <ClInclude Include="Color.h" />
     <ClInclude Include="config.h" />
-    <ClInclude Include="Display.h" />
+    <ClInclude Include="Banner.h" />
     <ClInclude Include="io_utils.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="TheSnakesGame.h" />
