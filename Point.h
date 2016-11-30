@@ -7,8 +7,10 @@
 using namespace std;
 
 class Point {
-	int x, y;//maybe we should init these to something???
+	int x, y;
 public:
+	Point(int _x = 1, int _y = 1) : x(_x), y(_y) {}
+
 	int getX() const {
 		return x;
 	}
@@ -30,7 +32,8 @@ public:
 		Point next = *this;//represents the direction
 		next.move(direction);
 		return next;
-	}	
+	}
 };
+
 
 #endif
