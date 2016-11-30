@@ -3,7 +3,7 @@
 using namespace std;
 
 #include "TheSnakesGame.h"
-#include "_board.h"
+
 
 int main() {
 	TheSnakesGame game;

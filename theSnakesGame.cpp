@@ -3,20 +3,13 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
-void TheSnakesGame::handleObjectCreationFromBoard(int row, int col){
-	//calls setPosition to put the snakes in position
-	
-	if (board[row][col] == '@')
-		s[0].setPosition(row, col);
-	else if (board[row][col] == '#')
-		s[1].setPosition(row, col);
 
-}
 
 void TheSnakesGame::setBoard() {
 	//copy board sent to us into originalBoard, setArrowKeys, setColor
 	
 	theboard.setGame(this);
+	theboard.draw();
 	s[0].setArrowKeys("wsad");
 	s[1].setArrowKeys("ikjl");
 	s[0].setColor(Color::WHITE);
@@ -30,7 +23,7 @@ void TheSnakesGame::setBoard() {
 
 bool TheSnakesGame::isWall(const Point& p) {
 	
-	return board[p.getY()][p.getX()] == '+';
+	return theboard.board[p.getY()][p.getX()] == '+';
 }
 
 bool TheSnakesGame::isCookie(const Point& p) {
@@ -38,25 +31,13 @@ bool TheSnakesGame::isCookie(const Point& p) {
 
 
 
-	return board[p.getY()][p.getX()] == '+';
+	return true;
 }
 
 void TheSnakesGame::init() {
 	//copy original board to actual board (board) and set Snakes Start point
 	
-	//print board func
-	for (int i = 0; i < ROWS; i++)
-	{
-		for (int j = 0; j < COLS; j++)
-		{
 
-			board[i][j] = originalBoard[i][j];
-			handleObjectCreationFromBoard(i, j);
-			gotoxy(j, i);//reversed order cols=x rows=y
-			cout << originalBoard[i][j];
-
-		}
-	}
 	for (int i = 0; i < ROWS; i++)
 		for (int j = 0; j < COLS; j++)
 			if (cookie.isPos(j, i))
