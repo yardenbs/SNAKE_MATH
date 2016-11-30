@@ -1,10 +1,15 @@
+#ifndef _BOARD
 
-const char* board_example[ROWS]={
-//	         10        20        30        40        50        60        70       79
-//	01234567890123456789012345678901234567890123456789012345678901234567890123456789
-	"TASK:                                                              |## SCORE ###", // 0
+#define _BOARD
+
+#include "TheSnakesGame.h"
+
+const char* board_example[ROWS] = {
+   //          10        20        30        40        50        60        70       79
+   //01234567890123456789012345678901234567890123456789012345678901234567890123456789
+	"TASK:                                                              |   SCORE    ", // 0
 	"                                                                   |P1:   |P2:  ", // 1
-	"___________________________________________________________________#############", // 2
+	"________________________________________________________________________________", // 2
 	"                                                                                ", // 3
 	"                                                                                ", // 4
 	"                                                                                ", // 5
@@ -19,10 +24,10 @@ const char* board_example[ROWS]={
 	"                                                                                ", // 14
 	"                                                                                ", // 15
 	"                                                                                ", // 16
-	"                                                              @                 ", // 17
+	"                                                                                ", // 17
 	"                                                                                ", // 18
 	"                                                                                ", // 19
-	"                 #                                                              ", // 20
+	"                                                                                ", // 20
 	"                                                                                ", // 21
 	"                                                                                ", // 22
 	"                                                                                ", // 23
@@ -31,7 +36,7 @@ const char* board_example[ROWS]={
 
 
 class Board {
-	
+
 	char originalBoard[ROWS][COLS + 1];	// this is the ORIGINAL board that we got (we need COLS+1 because we handle it as null terminated char*)
 	char board[ROWS][COLS + 1];	// this is the actual board we play on, i.e. changes on board are done here
 
@@ -48,3 +53,8 @@ public:
 
 
 };
+
+
+
+#endif // !_BOARD
+
