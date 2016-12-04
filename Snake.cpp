@@ -2,17 +2,20 @@
 #include "TheSnakesGame.h"
 
 
-Snake::Snake(int size, const Point& position, Color c)
+Snake::Snake(int _size, const Point& _position, Color _c, const char* _keys, const int _dir)
 {
-	//color = c;
-	setColor(c);
-	this->size = size;
-	body = new Point[size];
-	for (int i = 0; i < size; i++)
+	setColor(_c);
+	this->size = _size;
+	this->setDirection(_dir);
+	this->setArrowKeys(_keys);
+	body = new Point[_size];
+
+	for (int i = 0; i < _size; i++)
 	{
-		body[i].set(position.getX(), position.getY());
-		//body[i] = position;
-	}		
+		body[i].set(_position.getX(), _position.getY(), _position.getCH());
+	}
+
+
 }
 
 Snake::Snake(const Snake& s)
@@ -25,24 +28,17 @@ Snake::Snake(const Snake& s)
 		body[i] = s.body[i];
 	}
 }
-/*
-void Snake::setPosition(int y, int x)
-{
-	for (int i = 0; i < size; i++)
-		body[i].set(x, y);
-}*/
+
 void Snake::move()
 {
 	body[size - 1].draw(' ');
 	for (int i = size - 1; i > 0; --i)
 		body[i] = body[i - 1];
 
-	if (theGame->isWall(body[0].next(direction)))
-		direction = 4;
 
 	body[0].move(direction);
 	setTextColor(color);
-	body[0].draw('@');
+	body[0].draw(body[0].getCH);
 }
 int Snake::getDirection(char key)
 {
@@ -51,5 +47,5 @@ int Snake::getDirection(char key)
 		if (key == arrowKeys[i])
 			return i;
 	}
-	return -1;
+	return -1;//enom
 }

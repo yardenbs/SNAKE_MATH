@@ -7,23 +7,22 @@
 class TheSnakesGame;
 
 class Snake {
-	//enum {SIZE = 5};
-	//Point body[SIZE];
+
 	int size;
-	Point* body;
+	vector<Point> body;
 	int direction = 3; // TODO: use enum!
 	char arrowKeys[4];
 	Color color;
 	TheSnakesGame* theGame;
 public:
-	Snake(int size, const Point& position, Color c);//c'tor
+	Snake(int size, const Point& position, Color c, const char* keys,const int  dir);//c'tor
 	~Snake(){ delete[] body; } //d'tor
 	Snake(const Snake& s); //copy c'tor
 
 	void setGame(TheSnakesGame* _theGame) {
 		theGame = _theGame;
 	}
-	void setPosition(int y, int x);
+
 	void setArrowKeys(const char* keys) {
 		arrowKeys[0] = keys[0];
 		arrowKeys[1] = keys[1];
@@ -38,7 +37,11 @@ public:
 	void setDirection(int dir) {
 		direction = dir;
 	}
-
+	void getBigger()
+	{
+		size++;
+		
+	}
 };
 
 #endif

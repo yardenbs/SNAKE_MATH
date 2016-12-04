@@ -25,7 +25,7 @@ public:
 		x = _x;
 		y = _y;
 	}
-	void draw() {
+	void draw(char ch) {
 		gotoxy(x, y);
 		cout << ch;
 		cout.flush();
