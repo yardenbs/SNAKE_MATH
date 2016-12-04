@@ -2,6 +2,7 @@
 #define _THESNAKESGAME_H_
 
 #include "io_utils.h"
+#include <time.h>
 
 enum { ROWS = 24, COLS = 80 }; //screen size
 

@@ -21,6 +21,9 @@
     <ClCompile Include="Point.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Rat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="_board.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Banner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
