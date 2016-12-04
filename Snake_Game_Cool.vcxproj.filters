@@ -21,7 +21,11 @@
     <ClCompile Include="Point.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Snake.cpp">
+=======
+    <ClCompile Include="Rat.cpp">
+>>>>>>> 60b7589563aa852dec577ce45729047e7a7e9ede
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,7 +51,11 @@
     <ClInclude Include="Banner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Snake.h">
+=======
+    <ClInclude Include="Rat.h">
+>>>>>>> 60b7589563aa852dec577ce45729047e7a7e9ede
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
