@@ -3,13 +3,11 @@
 
 
 #include "io_utils.h"
-<<<<<<< HEAD
 #include <vector>
 using namespace std;
  
-=======
+
 #include <time.h>
->>>>>>> 60b7589563aa852dec577ce45729047e7a7e9ede
 
 enum { ROWS = 24, COLS = 80 }; //screen size
 
