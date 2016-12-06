@@ -1,7 +1,6 @@
 
 #ifndef _BANNER_
 #define _BANNER_
-#include "TheSnakesGame.h"
 class Banner {
 
 	int score1, score2;

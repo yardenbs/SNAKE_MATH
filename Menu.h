@@ -1,10 +1,10 @@
-#ifndef MENUE
-#define MENUE
+#ifndef MENU
+#define MENU
 #include "TheSnakesGame.h"
 
 enum{MEN_ROWS = 10, MEN_COLS = 25};
 
-const char* main_menue[MEN_ROWS] = {
+const char* main_menu[MEN_ROWS] = {
    //          10        20        30        40        50        60        70       79
    //01234567890123456789012345678901234567890123456789012345678901234567890123456789
 	"@@@@@@@@@@@@@@@@@@@@@@@@@", // 0
@@ -20,11 +20,11 @@ const char* main_menue[MEN_ROWS] = {
 //   01234567890123456789012345678901234567890123456789012345678901234567890123456789
 };
 
-const char* pause_menue[MEN_ROWS] = {
+const char* pause_menu[MEN_ROWS] = {
    //          10        20        30        40        50        60        70       79
    //01234567890123456789012345678901234567890123456789012345678901234567890123456789
 	"@@@@@@@@@@@@@@@@@@@@@@@@@", // 0
-	"@       MAIN MENUE:     @", // 1
+	"@       MAIN MENU:      @", // 1
 	"@       **********      @", // 2
 	"@ (1)    Exit           @", // 3
 	"@ (2) Go to Main Menue  @", // 4
@@ -37,11 +37,11 @@ const char* pause_menue[MEN_ROWS] = {
 };
 
 /*
-const char* instructions_menue[MEN_ROWS] = {
+const char* instructions_menu[MEN_ROWS] = {
 	//          10        20        30        40        50        60        70       79
 	//01234567890123456789012345678901234567890123456789012345678901234567890123456789
 	"@@@@@@@@@@@@@@@@@@@@@@@@@", // 0
-	"@       MAIN MENUE:     @", // 1
+	"@       MAIN MENU:     @", // 1
 	"@       **********      @", // 2
 	"@                       @", // 3
 	"@   (1) How to play?    @", // 4
@@ -55,7 +55,7 @@ const char* instructions_menue[MEN_ROWS] = {
 */
 
 
-class Menue {
+class Menu {
 	//data  members:
 	TheSnakesGame* theGame;
 public:
