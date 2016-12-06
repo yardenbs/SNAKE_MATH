@@ -2,32 +2,25 @@
 #include "TheSnakesGame.h"
 
 
-Snake::Snake(int _size, const Point& _position, Color _c, const char* _keys, const int _dir)
+Snake::Snake(int size, const Point& position, Color c, const char* keys, const int  dir)
 {
-	setColor(_c);
-	this->size = _size;
-	this->setDirection(_dir);
-	this->setArrowKeys(_keys);
-	body = new Point[_size];
-
-	for (int i = 0; i < _size; i++)
-	{
-		body[i].set(_position.getX(), _position.getY(), _position.getCH());
-	}
-
-
-}
-
-Snake::Snake(const Snake& s)
-{
-	setColor(s.color);
-	size = s.size;
-	body = new Point[size];
 	for (int i = 0; i < size; i++)
 	{
-		body[i] = s.body[i];
+		body.push_back(position);
 	}
+	setArrowKeys(keys);
+	setColor(c);
+	setDirection(dir);
 }
+
+void Snake::getBigger()
+{
+	//the snake get bigger by one
+	body.push_back(Point(body[size - 1].getX, body[size - 1].getY, body[size - 1].getCH));
+	size++;
+}
+
+
 
 void Snake::move()
 {
@@ -48,4 +41,14 @@ int Snake::getDirection(char key)
 			return i;
 	}
 	return -1;//enom
+}
+
+bool Snake::isBitten(const Point& next) {//did a snake just bite me??? omg...
+
+	for (int i = 0; i < size; i++)//check the whole body for bites:
+	{
+		if (next.getX() == body[i].getX() && next.getY() == body[i].getY())
+			return true;//yes, that was definitly a snake. FUUUUUUUU$%#$%!!!
+	}
+	return false;//FEWHHH! that was close! 
 }

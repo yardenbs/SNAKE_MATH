@@ -8,16 +8,18 @@ class TheSnakesGame;
 
 class Snake {
 
-	int size;
+	int size=3;
 	vector<Point> body;
 	int direction = 3; // TODO: use enum!
 	char arrowKeys[4];
 	Color color;
 	TheSnakesGame* theGame;
 public:
-	Snake(int size, const Point& position, Color c, const char* keys,const int  dir);//c'tor
-	~Snake(){ delete[] body; } //d'tor
-	Snake(const Snake& s); //copy c'tor
+	Snake(int size, const Point& position, Color c, const char* keys, const int  dir);
+
+
+//c'tor
+	~Snake(){ body.~vector; } //d'tor //copy c'tor
 
 	void setGame(TheSnakesGame* _theGame) {
 		theGame = _theGame;
@@ -37,11 +39,8 @@ public:
 	void setDirection(int dir) {
 		direction = dir;
 	}
-	void getBigger()
-	{
-		size++;
-		
-	}
+	void getBigger();
+	bool Snake::isBitten(const Point& next);
 };
 
 #endif
