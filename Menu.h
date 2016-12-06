@@ -1,6 +1,6 @@
 #ifndef MENU
 #define MENU
-#include "TheSnakesGame.h"
+class TheSnakesGame;
 
 enum{MEN_ROWS = 10, MEN_COLS = 25};
 

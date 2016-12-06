@@ -2,7 +2,8 @@
 
 #define RAT
 #include "Point.h"
-#include "TheSnakesGame.h"
+
+class TheSnakesGame;
 
 class Rat {
 	int val;
