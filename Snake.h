@@ -39,7 +39,7 @@ public:
 	void setDirection(int dir) {
 		direction = dir;
 	}
-	void getBigger();
+	void grow();
 	bool Snake::isBitten(const Point& next);
 };
 

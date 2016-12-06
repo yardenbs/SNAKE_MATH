@@ -13,7 +13,7 @@ Snake::Snake(int size, const Point& position, Color c, const char* keys, const i
 	setDirection(dir);
 }
 
-void Snake::getBigger()
+void Snake::grow()
 {
 	//the snake get bigger by one
 	body.push_back(Point(body[size - 1].getX, body[size - 1].getY, body[size - 1].getCH));
