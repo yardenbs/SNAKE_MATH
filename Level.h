@@ -30,6 +30,15 @@ public:
 
 };
 
+class FindSquaredInt: public Level {
+
+public:
+	FindSquaredInt() : Level("Eat squared integer numbers only!") {}
+
+	virtual bool isSol(const int num);
+
+};
+
 
 
 #endif // !PLAYGROUND

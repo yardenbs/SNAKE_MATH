@@ -16,5 +16,17 @@ bool FindPrimes::isSol(const int num){
 	return false;
 }
 
+bool FindSquaredInt::isSol(const int num) {
+
+	int whole = 0;
+	while (whole<num)
+	{
+		if (num == whole*whole)
+			return true;
+		whole++;
+	}
+	return false;
+}
+
 
 
